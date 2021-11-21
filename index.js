@@ -37,7 +37,8 @@ function isAnAdult(age) {
 // Output: The result (number)
 function yearsToAdulthood(age) {
 	// write your code here
-	return 18 - age;
+	if (!isAnAdult(age)) return 18 - age;
+	return 0;
 }
 
 // Input: person ({ age: number, name: string })
@@ -60,24 +61,24 @@ const number1 = add(2, 3);
 const number2 = add(5, 9);
 const number3 = add(6, 4);
 const number4 = add(10, 111);
-console.log(number1);
-console.log(number2);
-console.log(number3);
-console.log(number4);
+console.log(`2 + 3 = ${number1}`);
+console.log(`5 + 9 = ${number2}`);
+console.log(`6 + 4 = ${number3}`);
+console.log(`10 + 111 = ${number4}`);
 console.log("\n\n");
 
 const number1EvenCheck = isEven(5);
 const number2EvenCheck = isEven(12);
 const number3EvenCheck = isEven(11);
 const number4EvenCheck = isEven(14);
-console.log(number1EvenCheck);
-console.log(number2EvenCheck);
-console.log(number3EvenCheck);
-console.log(number4EvenCheck);
+console.log(`Is the number ${number1} even? ${number1EvenCheck}`);
+console.log(`Is the number ${number2} even? ${number2EvenCheck}`);
+console.log(`Is the number ${number3} even? ${number3EvenCheck}`);
+console.log(`Is the number ${number4} even? ${number4EvenCheck}`);
 
 console.log("\n\n");
 
-people = [
+const people = [
 	{ age: 12, name: "Ed" },
 	{ age: 18, name: "Rinor" },
 	{ age: 60, name: "Geri" },
@@ -91,14 +92,12 @@ for (const person of people) {
 console.log("\n\n");
 
 for (const person of people) {
-	console.log(isAnAdult(person.age));
+	console.log(`Is ${person.name} an adult? ${isAnAdult(person.age)}`);
 }
 console.log("\n\n");
 
 for (const person of people) {
-	if (person.age < 18) {
-		console.log(yearsToAdulthood(person.age));
-	}
+	console.log(`How many years does ${person.name} need to become an adult? ${yearsToAdulthood(person.age)}`);
 }
 console.log("\n\n");
 
