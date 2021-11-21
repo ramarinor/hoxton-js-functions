@@ -67,10 +67,10 @@ console.log(`6 + 4 = ${number3}`);
 console.log(`10 + 111 = ${number4}`);
 console.log("\n\n");
 
-const number1EvenCheck = isEven(5);
-const number2EvenCheck = isEven(12);
-const number3EvenCheck = isEven(11);
-const number4EvenCheck = isEven(14);
+const number1EvenCheck = isEven(number1);
+const number2EvenCheck = isEven(number2);
+const number3EvenCheck = isEven(number3);
+const number4EvenCheck = isEven(number4);
 console.log(`Is the number ${number1} even? ${number1EvenCheck}`);
 console.log(`Is the number ${number2} even? ${number2EvenCheck}`);
 console.log(`Is the number ${number3} even? ${number3EvenCheck}`);
